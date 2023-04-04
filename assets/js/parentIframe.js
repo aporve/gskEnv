@@ -420,6 +420,7 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'custom-event' && parsedData?.data?.code == "bot-reloaded") {
         console.log("bot-reloaded");
+        // let data = localStorage.getItem("updated-data")
         let data = sessionStorage.getItem("updated-data")
         console.log('refreshed local storage data in parentIframe', JSON.parse(data));
         let source = parsedData.data.data.source;
