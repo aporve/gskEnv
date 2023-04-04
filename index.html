@@ -108,27 +108,27 @@
 
     <script>
         // if(!(window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
-        // window.onbeforeunload = function () {
-        //     const data = localStorage.getItem("data");
-        //     ToBot("update-data-on-refresh", data);
-        //     return "Are you sure you want to exit?";
-        // };
-        // }
-
-        if (window.performance) {
-            console.info("window.performance works fine on this browser");
-        }
-
-        console.info(performance.navigation.type);
-        console.log(performance.navigation.TYPE_RELOAD, 'performance.navigation.TYPE_RELOAD---')
-        if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-            console.info("This page is reloaded");
+        window.onbeforeunload = function () {
             const data = localStorage.getItem("data");
             ToBot("update-data-on-refresh", data);
-            // return "Are you sure you want to exit?";
-        } else {
-            console.info("This page is not reloaded");
-        }
+            return "Are you sure you want to exit?";
+        };
+        // }
+
+        // if (window.performance) {
+        //     console.info("window.performance works fine on this browser");
+        // }
+
+        // console.info(performance.navigation.type);
+        // console.log(performance.navigation.TYPE_RELOAD, 'performance.navigation.TYPE_RELOAD---')
+        // if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+        //     console.info("This page is reloaded");
+        //     const data = localStorage.getItem("data");
+        //     ToBot("update-data-on-refresh", data);
+        //     // return "Are you sure you want to exit?";
+        // } else {
+        //     console.info("This page is not reloaded");
+        // }
 
 
         document.onreadystatechange = () => {
