@@ -420,8 +420,8 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'custom-event' && parsedData?.data?.code == "bot-reloaded") {
         console.log("bot-reloaded");
-        // let data = localStorage.getItem("updated-data")
-        let data = sessionStorage.getItem("updated-data")
+        let data = localStorage.getItem("updated-data")
+        // let data = sessionStorage.getItem("updated-data")
         console.log('refreshed local storage data in parentIframe', JSON.parse(data));
         let source = parsedData.data.data.source;
         console.log(source, 'get Source bot-reloaded');
@@ -506,8 +506,8 @@ window.addEventListener('message', function (eventData) {
             return;
         } else {
             console.error('-logout--')
-            // localStorage.removeItem("updated-data");
-            sessionStorage.removeItem("updated-data");
+            localStorage.removeItem("updated-data");
+            // sessionStorage.removeItem("updated-data");
             console.log("\n\n\n <--- Logout event in parent iframe ---> \n\n\n", parsedData);
             window.frames.ymIframe.chat.send({
                 event: {
@@ -969,8 +969,8 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'update-data-on-refresh') {
         console.log("\n\n\n <--- update-data-on-refresh event in parent iframe ---> \n\n\n", parsedData);
-        // localStorage.setItem("updated-data", parsedData.data);
-        sessionStorage.setItem("updated-data", parsedData.data);
+        localStorage.setItem("updated-data", parsedData.data);
+        // sessionStorage.setItem("updated-data", parsedData.data);
 
         console.log('After setting Local storage data');
         window.onload = function () {
@@ -982,8 +982,8 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'get-data-from-localstorage') {
         console.log("get-data-from-localstorage");
-        // let data = localStorage.getItem("updated-data")
-        let data = sessionStorage.getItem("updated-data")
+        let data = localStorage.getItem("updated-data")
+        // let data = sessionStorage.getItem("updated-data")
         // console.log('refreshed local storage data in parentIframe', JSON.parse(data));
         // if (!data) return;
         // document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
@@ -995,7 +995,7 @@ window.addEventListener('message', function (eventData) {
 
         if (data) {
             console.log("\n\n\n <---  Send data to Bot ---> \n\n\n", parsedData);
-            console.log("Session Storage True");
+            console.log("Local Storage True");
             window.frames.ymIframe.chat.send({
                 event: {
                     code: "get-data-from-localstorage",
@@ -1005,11 +1005,11 @@ window.addEventListener('message', function (eventData) {
             return;
         } else {
             console.log("\n\n\n <---  Send data to Bot ---> \n\n\n", parsedData);
-            console.log("Session Storage false");
+            console.log("Local Storage false");
             window.frames.ymIframe.chat.send({
                 event: {
                     code: "get-data-from-localstorage",
-                    data: "flase"
+                    data: "false"
                 }
             }, true);
             return;
