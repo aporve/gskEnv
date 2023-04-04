@@ -506,7 +506,8 @@ window.addEventListener('message', function (eventData) {
             return;
         } else {
             console.error('-logout--')
-            localStorage.removeItem("updated-data");
+            // localStorage.removeItem("updated-data");
+            sessionStorage.removeItem("updated-data");
             console.log("\n\n\n <--- Logout event in parent iframe ---> \n\n\n", parsedData);
             window.frames.ymIframe.chat.send({
                 event: {
@@ -1001,6 +1002,13 @@ window.addEventListener('message', function (eventData) {
                 }
             }, true);
             return;
+        } else {
+            window.frames.ymIframe.chat.send({
+                event: {
+                    code: "emptySessionData",
+                    data: "data"
+                }
+            }, true);
         }
 
 
