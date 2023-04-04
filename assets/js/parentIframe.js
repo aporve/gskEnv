@@ -1002,13 +1002,6 @@ window.addEventListener('message', function (eventData) {
                 }
             }, true);
             return;
-        } else {
-            window.frames.ymIframe.chat.send({
-                event: {
-                    code: "emptySessionData",
-                    data: "data"
-                }
-            }, true);
         }
 
 
