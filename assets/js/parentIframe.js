@@ -993,28 +993,22 @@ window.addEventListener('message', function (eventData) {
         // return;
 
 
-        if (data) {
-            console.log("\n\n\n <---  Send data to Bot ---> \n\n\n", parsedData);
-            console.log("Local Storage True");
-            window.frames.ymIframe.chat.send({
-                event: {
-                    code: "get-data-from-localstorage",
-                    data: "true"
-                }
-            }, true);
-            return;
-        } else {
-            console.log("\n\n\n <---  Send data to Bot ---> \n\n\n", parsedData);
-            console.log("Local Storage false");
-            window.frames.ymIframe.chat.send({
-                event: {
-                    code: "get-data-from-localstorage",
-                    data: "false"
-                }
-            }, true);
-            return;
+        function getData(data) {
+            if (data) {
+                console.log("\n\n\n <---  Send data to Bot ---> \n\n\n", parsedData);
+                console.log("Local Storage True");
+                window.frames.ymIframe.chat.send({
+                    event: {
+                        code: "get-data-from-localstorage",
+                        data: "data"
+                    }
+                }, true);
+                return;
+            }
+
         }
 
+        setTimeout(getData(data), 5000);
 
     }
 
