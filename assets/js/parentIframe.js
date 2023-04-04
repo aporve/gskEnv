@@ -995,10 +995,21 @@ window.addEventListener('message', function (eventData) {
 
         if (data) {
             console.log("\n\n\n <---  Send data to Bot ---> \n\n\n", parsedData);
+            console.log("Session Storage True");
             window.frames.ymIframe.chat.send({
                 event: {
                     code: "get-data-from-localstorage",
-                    data: "data"
+                    data: "true"
+                }
+            }, true);
+            return;
+        } else {
+            console.log("\n\n\n <---  Send data to Bot ---> \n\n\n", parsedData);
+            console.log("Session Storage false");
+            window.frames.ymIframe.chat.send({
+                event: {
+                    code: "get-data-from-localstorage",
+                    data: "flase"
                 }
             }, true);
             return;
