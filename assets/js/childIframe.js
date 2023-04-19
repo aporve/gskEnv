@@ -1,15 +1,15 @@
 (function addFrames() {
     try {
         console.log('reached---->')
-        document.getElementsByClassName("send-input").style.overflow = "hidden";
-        document.getElementsByClassName("margin-left").style.overflow = "40%";
-        // let h = window.innerHeight - 134;
-        // document.getElementById("chatBoxMainContainer").style.height = `${h}px`
-        // window.onresize = function (event) {
-        //     var frameHeight = window.innerHeight - 104 - 48;
-        //     document.getElementById("chatBoxMainContainer").style.height = `${frameHeight}px`
-        // };
-        // document.getElementById('player').style.width = '0px'
+        // document.getElementsByClassName("send-input").style.overflow = "hidden";
+        // document.getElementsByClassName("margin-left").style.overflow = "40%";
+        let h = window.innerHeight - 134;
+        document.getElementById("chatBoxMainContainer").style.height = `${h}px`
+        window.onresize = function (event) {
+            var frameHeight = window.innerHeight - 104 - 48;
+            document.getElementById("chatBoxMainContainer").style.height = `${frameHeight}px`
+        };
+        document.getElementById('player').style.width = '0px'
         document.querySelector('#chatContainer').insertAdjacentHTML(
             'afterbegin',
             `<div class="mod-head-side-bar-container">
