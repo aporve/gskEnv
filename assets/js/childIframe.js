@@ -1,5 +1,6 @@
 (function addFrames() {
     try {
+        console.log('reached---->')
         // let h = window.innerHeight - 134;
         // document.getElementById("chatBoxMainContainer").style.height = `${h}px`
         // window.onresize = function (event) {
@@ -23,7 +24,7 @@
         //         </ul>
         //     </div>
         //     </div> `
-        );
+        // );
     }
     catch (e) {
         console.error("failing while trying to insert add frame script", e);
