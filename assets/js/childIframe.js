@@ -1,7 +1,6 @@
 (function addFrames() {
     try {
         console.log('reached---->');
-        document.getElementsByClassName("send-input-form").style.marginLeft = "40%";
         let h = window.innerHeight - 134;
         document.getElementById("chatBoxMainContainer").style.height = `${h}px`
         window.onresize = function (event) {
