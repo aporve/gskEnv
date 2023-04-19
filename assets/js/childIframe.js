@@ -1,28 +1,28 @@
 (function addFrames() {
     try {
-        let h = window.innerHeight - 134;
-        document.getElementById("chatBoxMainContainer").style.height = `${h}px`
-        window.onresize = function (event) {
-            var frameHeight = window.innerHeight - 104 - 48;
-            document.getElementById("chatBoxMainContainer").style.height = `${frameHeight}px`
-        };
+        // let h = window.innerHeight - 134;
+        // document.getElementById("chatBoxMainContainer").style.height = `${h}px`
+        // window.onresize = function (event) {
+        //     var frameHeight = window.innerHeight - 104 - 48;
+        //     document.getElementById("chatBoxMainContainer").style.height = `${frameHeight}px`
+        // };
         // document.getElementById('player').style.width = '0px'
-        document.querySelector('#chatContainer').insertAdjacentHTML(
-            'afterbegin',
-            `<div class="mod-head-side-bar-container">
-            <div class="overflow-container-sidebar">
-                <ul class="sidebar-wrapper">
-                    <iframe id='iframe' style="width:100%; height:100%; border: none;"  src="https://aporve.github.io/gskEnv/index.html"></iframe>
-                </ul>
-            </div>
-            <div class="overflow-container-header">
-                <ul class="header-wrapper">
-                  <div style="width: 100%; height:100%">
-                    <img src="https://cdn.yellowmessenger.com/7EAbPihYqpwv1678692649814.jpg" alt="GSK Image" style="width: 100%; height:100%">
-                  </div>
-                </ul>
-            </div>
-            </div> `
+        // document.querySelector('#chatContainer').insertAdjacentHTML(
+        //     'afterbegin',
+        //     `<div class="mod-head-side-bar-container">
+        //     <div class="overflow-container-sidebar">
+        //         <ul class="sidebar-wrapper">
+        //             <iframe id='iframe' style="width:100%; height:100%; border: none;"  src="https://aporve.github.io/gskEnv/index.html"></iframe>
+        //         </ul>
+        //     </div>
+        //     <div class="overflow-container-header">
+        //         <ul class="header-wrapper">
+        //           <div style="width: 100%; height:100%">
+        //             <img src="https://cdn.yellowmessenger.com/7EAbPihYqpwv1678692649814.jpg" alt="GSK Image" style="width: 100%; height:100%">
+        //           </div>
+        //         </ul>
+        //     </div>
+        //     </div> `
         );
     }
     catch (e) {
