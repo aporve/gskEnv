@@ -44,8 +44,8 @@
     
     #chatDetails { margin-left:40%} 
     
-    .send-input { margin-left:40%} 
-    .send-input-form { margin-left:40%} 
+    .send-input { align-items: end;} 
+    .send-input-form { width: 40%;} 
     
     .blur{ -webkit-filter: blur(30px);} 
     #chatBoxMain { padding: 0 0 31px 0; } 
