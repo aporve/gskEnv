@@ -18,7 +18,7 @@ function injectDynamicCssToChild() {
     var ymFrameHead = window.frames["ymIframe"].document.getElementsByTagName("head")[0];
     var modularStyles = document.createElement('style');
     modularStyles.type = 'text/css';
-
+    var css = '#chatBoxMainContainer.message-icons.live-chat { margin: 4.8rem 0 0 40%; background-image: url("https://cdn.yellowmessenger.com/UBsc1FLzsOtU1673341571371.png")}'
     if (modularStyles.styleSheet) {
         modularStyles.styleSheet.cssText = css;
     } else {
