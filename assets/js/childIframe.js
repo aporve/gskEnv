@@ -8,23 +8,23 @@
         //     document.getElementById("chatBoxMainContainer").style.height = `${frameHeight}px`
         // };
         // document.getElementById('player').style.width = '0px'
-        // document.querySelector('#chatContainer').insertAdjacentHTML(
-        //     'afterbegin',
-        //     `<div class="mod-head-side-bar-container">
-        //     <div class="overflow-container-sidebar">
-        //         <ul class="sidebar-wrapper">
-        //             <iframe id='iframe' style="width:100%; height:100%; border: none;"  src="https://aporve.github.io/gskEnv/index.html"></iframe>
-        //         </ul>
-        //     </div>
-        //     <div class="overflow-container-header">
-        //         <ul class="header-wrapper">
-        //           <div style="width: 100%; height:100%">
-        //             <img src="https://cdn.yellowmessenger.com/7EAbPihYqpwv1678692649814.jpg" alt="GSK Image" style="width: 100%; height:100%">
-        //           </div>
-        //         </ul>
-        //     </div>
-        //     </div> `
-        // );
+        document.querySelector('#chatContainer').insertAdjacentHTML(
+            'afterbegin',
+            `<div class="mod-head-side-bar-container">
+            <div class="overflow-container-sidebar">
+                <ul class="sidebar-wrapper">
+                    <iframe id='iframe' style="width:100%; height:100%; border: none;"  src="https://aporve.github.io/gskEnv/index.html"></iframe>
+                </ul>
+            </div>
+            <div class="overflow-container-header">
+                <ul class="header-wrapper">
+                  <div style="width: 100%; height:100%">
+                    <img src="https://cdn.yellowmessenger.com/7EAbPihYqpwv1678692649814.jpg" alt="GSK Image" style="width: 100%; height:100%">
+                  </div>
+                </ul>
+            </div>
+            </div> `
+        );
     }
     catch (e) {
         console.error("failing while trying to insert add frame script", e);
