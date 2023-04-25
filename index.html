@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
     <!-- seo properties -->
     <meta name="description" content="">
@@ -115,30 +116,12 @@
         };
         // }
 
-        // if (window.performance) {
-        //     console.info("window.performance works fine on this browser");
-        // }
-
-        // console.info(performance.navigation.type);
-        // console.log(performance.navigation.TYPE_RELOAD, 'performance.navigation.TYPE_RELOAD---')
-        // if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-        //     console.info("This page is reloaded");
-        //     const data = localStorage.getItem("data");
-        //     ToBot("update-data-on-refresh", data);
-        //     // return "Are you sure you want to exit?";
-        // } else {
-        //     console.info("This page is not reloaded");
-        // }
-
-
         document.onreadystatechange = () => {
             if (document.readyState === 'complete') {
                 console.log('---Loaded---');
                 ToBot("get-data-from-localstorage", 'LocalStorageEvent');
             }
         };
-
-
 
         const snack = document.querySelector('#snack');
         const snackbar = document.querySelector('.snackbar');

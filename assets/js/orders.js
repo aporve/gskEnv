@@ -8,7 +8,7 @@ function loadUserWelcomeUI(data) {
     $("#content_box").empty();
 
 
-    if (!data?.["previous_orders"]?.["orders"].length) {
+    if(!data?.["previous_orders"]?.["orders"].length) {
         $("#content_box").append(`<div class='empty_screen_msg'>${locale["labels"]["emptyOrder"]}`);
     }
 
@@ -25,8 +25,9 @@ function loadUserWelcomeUI(data) {
                             <div class="upper_history_container" id="last_order_history"></div>
                             <div class="btn_wrapper">
                                 <div class="btnbox">
-                                    ${(window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? `<a class="btn outline place_new_order" href="#">${locale["buttons"]["placeNewOrder"]}</a>` : ''
-        }
+                                    ${
+                                        (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') ? `<a class="btn outline place_new_order" href="#">${locale["buttons"]["placeNewOrder"]}</a>`: ''
+                                    }
                                 </div>
                             </div>
                         </div>
@@ -214,7 +215,7 @@ function loadUserWelcomeUI(data) {
                     </div>
                 </div>
             `);
-
+    
             $(".card_click").click(function (e) {
                 e.stopPropagation();
                 e.stopImmediatePropagation();

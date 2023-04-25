@@ -1,6 +1,5 @@
 (function addFrames() {
     try {
-        console.log('reached---->');
         let h = window.innerHeight - 134;
         document.getElementById("chatBoxMainContainer").style.height = `${h}px`
         window.onresize = function (event) {
@@ -369,6 +368,13 @@ window.addEventListener('message', function (eventData) {
         }), '*');
     }
 
+    if (parsedEventData.event_code === "profile-settings") {
+        // console.log('profile-settings Data in child Iframe~~~>>', parsedEventData.data)
+        parent.postMessage(JSON.stringify({
+            event_code: 'profile-settings',
+            data: parsedEventData.data
+        }), '*');
+    }
 
     if (parsedEventData.event_code === "get-data-from-localstorage") {
         // console.log('get-data-from-localstorage Data in child Iframe~~~>>', parsedEventData.data)
