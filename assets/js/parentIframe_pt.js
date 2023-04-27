@@ -865,24 +865,26 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'associated-accounts') {
         console.log("\n\n\n <---  associated-accounts event in parent iframe ---> \n\n\n", parsedData);
-        window.frames.ymIframe.chat.send({
-            event: {
-                code: "associated-accounts",
-                data: parsedData
-            }
-        }, true);
-        return;
+        console.log('skip event---')
+        // window.frames.ymIframe.chat.send({
+        //     event: {
+        //         code: "associated-accounts",
+        //         data: parsedData
+        //     }
+        // }, true);
+        // return;
     }
 
     if (parsedData?.event_code == 'notification') {
         console.log("\n\n\n <---  notification event in parent iframe ---> \n\n\n", parsedData);
-        window.frames.ymIframe.chat.send({
-            event: {
-                code: "notification",
-                data: parsedData
-            }
-        }, true);
-        return;
+        console.log('skip event---')
+        // window.frames.ymIframe.chat.send({
+        //     event: {
+        //         code: "notification",
+        //         data: parsedData
+        //     }
+        // }, true);
+        // return;
     }
 
     if (parsedData?.event_code == 'addaccount-associatedaccounts') {
