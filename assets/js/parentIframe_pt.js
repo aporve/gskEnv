@@ -853,7 +853,7 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'profile-details') {
         console.log("\n\n\n <---  profile-details event in parent iframe ---> \n\n\n", parsedData);
-        console.log('Not sending any event to bot--')
+        console.log('skip event---')
         // window.frames.ymIframe.chat.send({
         //     event: {
         //         code: "profile-details",
