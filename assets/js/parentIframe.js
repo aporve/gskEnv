@@ -879,13 +879,14 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'notification') {
         console.log("\n\n\n <---  notification event in parent iframe ---> \n\n\n", parsedData);
-        window.frames.ymIframe.chat.send({
-            event: {
-                code: "notification",
-                data: parsedData
-            }
-        }, true);
-        return;
+        console.log('Not sending associated-accounts event to bot--')
+        // window.frames.ymIframe.chat.send({
+        //     event: {
+        //         code: "notification",
+        //         data: parsedData
+        //     }
+        // }, true);
+        // return;
     }
 
     if (parsedData?.event_code == 'addaccount-associatedaccounts') {
