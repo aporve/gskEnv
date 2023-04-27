@@ -1,16 +1,16 @@
 
 (function injectJS() {
-  try {
-    var iFrameHead = window.frames["ymIframe"].document.getElementsByTagName("head")[0];
-    var modularBars = document.createElement('script');
-    modularBars.type = 'text/javascript';
-    modularBars.src = 'https://aporve.github.io/gskEnv/assets/js/childIframe_pt.js';
-    iFrameHead.appendChild(modularBars);
-    injectDynamicCssToParent();
-    injectDynamicCssToChild();
-  } catch (e) {
-    console.error("failed while inserting to iFrame", e);
-  }
+    try {
+        var iFrameHead = window.frames["ymIframe"].document.getElementsByTagName("head")[0];
+        var modularBars = document.createElement('script');
+        modularBars.type = 'text/javascript';
+        modularBars.src = 'https://aporve.github.io/gskEnv/assets/js/childIframe_pt.js';
+        iFrameHead.appendChild(modularBars);
+        injectDynamicCssToParent();
+        injectDynamicCssToChild();
+    } catch (e) {
+        console.error("failed while inserting to iFrame", e);
+    }
 })();
 
 
@@ -94,15 +94,15 @@ window.addEventListener('message', function (eventData) {
     console.log("parsedData", parsedData)
 
 
-  if (parsedData?.event_code == 'custom-event' && parsedData?.data?.code == "attach") {
-    document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
-      event_code: 'attach',
-      data: 'data'
-    }), '*');
-    console.log("---Attach---");
-    return;
+    if (parsedData?.event_code == 'custom-event' && parsedData?.data?.code == "attach") {
+        document.getElementById('ymIframe').contentWindow.postMessage(JSON.stringify({
+            event_code: 'attach',
+            data: 'data'
+        }), '*');
+        console.log("---Attach---");
+        return;
 
-  }
+    }
 
     if (parsedData?.event_code == 'custom-event' && parsedData?.data?.code == "welcome-screen") {
         let source = parsedData.data.data.source;
@@ -853,13 +853,14 @@ window.addEventListener('message', function (eventData) {
 
     if (parsedData?.event_code == 'profile-details') {
         console.log("\n\n\n <---  profile-details event in parent iframe ---> \n\n\n", parsedData);
-        window.frames.ymIframe.chat.send({
-            event: {
-                code: "profile-details",
-                data: parsedData
-            }
-        }, true);
-        return;
+        console.log('Not sending any event to bot--')
+        // window.frames.ymIframe.chat.send({
+        //     event: {
+        //         code: "profile-details",
+        //         data: parsedData
+        //     }
+        // }, true);
+        // return;
     }
 
     if (parsedData?.event_code == 'associated-accounts') {
@@ -947,7 +948,7 @@ window.addEventListener('message', function (eventData) {
         }
 
 
-  }
+    }
 
 
 
