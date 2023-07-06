@@ -1107,7 +1107,7 @@ function getPreviousOrderTableData(data, currentSku) {
                     </td>
                 </tr>
                 <tr class="info_row bordered">
-                    <td class="info_data" colspan="1">£ ${item["price"] && item["price"] !== "null" ? item["price"] : "-"}</td>
+                    <td class="info_data" colspan="1">€ ${item["price"] && item["price"] !== "null" ? item["price"] : "-"}</td>
                     <td class="info_data" colspan="1">${item["units"] && item["units"] !== "null" ? item["units"] : "-"}</td>
                     <td class="info_data" colspan="1">${item["free_goods"] && item["free_goods"] !== "null" ? item["free_goods"] : "-"}</td>
                     <td class="info_data" colspan="1">${item["discount"] && item["discount"] !== "null" ? (item["discount"] + '%') : "-"}</td>
@@ -2394,7 +2394,7 @@ function getProductItems(data) {
                 </td>
             </tr>
             <tr class="info_row">
-                <td class="info_data" colspan="1">£ ${item["price"]}</td>
+                <td class="info_data" colspan="1">€ ${item["price"]}</td>
                 <td class="info_data" colspan="1">${item["units"]}</td>
                 <td class="info_data" colspan="1">+${item["free_goods"]}</td>
                 <td class="info_data" colspan="1">${item["discount"]}%</td>
