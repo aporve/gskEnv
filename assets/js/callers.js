@@ -310,7 +310,7 @@ function ToApp(eventName, data, orgData) {
             cancelOrder();
             break;
         case "legal-copyright":
-            addLegalCopyright(data);
+            // addLegalCopyright(data);
             break;
     
         default:
