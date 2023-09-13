@@ -178,18 +178,6 @@ function showSkuLevelDetailsBrand(data, currentSku, requestType, requestSku) {
             if (window['counter_input_wrapper']) {
                 delete window['counter_input_wrapper'];
             }
-            let trimData = window.wholesalerAccountData && window.wholesalerAccountData.filter((whData, index) => {
-                let sum = 0;
-                whData["product_details"].map((detail, ind) => {
-                    sum = sum + Number(detail["units"]);
-                })
-                if(sum != 0) {
-                    return whData;
-                } else {
-                    orderCartData.pop();
-                }
-            });
-            window.wholesalerAccountData = trimData;
             window.dataStore["new_orders"]["orders"] = window.wholesalerAccountData;
         } else {
             console.log("wind --> ", window.wholesalerAccountData);
@@ -289,20 +277,7 @@ function showSkuLevelDetailsBrand(data, currentSku, requestType, requestSku) {
                     isDateSelectedforNewOrder = "";
                 }
             })
-            if(isDateSelectedforNewOrder) {
-                let trimData = window.wholesalerAccountData && window.wholesalerAccountData.filter((whData, index) => {
-                    let sum = 0;
-                    whData["product_details"].map((detail, ind) => {
-                        sum = sum + Number(detail["units"]);
-                    })
-                    if(sum != 0) {
-                        return whData;
-                    } else {
-                        orderCartData.pop();
-                    }
-                });
-                window.wholesalerAccountData = trimData;
-                window.dataStore['new_orders']['orders'] = trimData;
+            if (isDateSelectedforNewOrder) {
                 loadBrandSelectionUI(window.dataStore);
                 let nwData = {
                     ...window.dataStore,
@@ -664,7 +639,6 @@ function showBrandLevelDetails(data, currentSku, requestType, requestSku) {
         e.stopImmediatePropagation();
         let parseData = getParsedData();
         let getSkuAcc = [];
-        let sum = 0;
         console.log("window.counter_input_wrapper -> ", window.counter_input_wrapper)
         getSkuAcc = window.wholesalerAccountData && window.wholesalerAccountData.map((whData, index) => {
             return whData["sku"];
@@ -699,18 +673,6 @@ function showBrandLevelDetails(data, currentSku, requestType, requestSku) {
             if (window['counter_input_wrapper']) {
                 delete window['counter_input_wrapper'];
             }
-            let trimData = window.wholesalerAccountData && window.wholesalerAccountData.filter((whData, index) => {
-                let sum = 0;
-                whData["product_details"].map((detail, ind) => {
-                    sum = sum + Number(detail["units"]);
-                })
-                if(sum != 0) {
-                    return whData;
-                } else {
-                    orderCartData.pop();
-                }
-            });
-            window.wholesalerAccountData = trimData;
             window.dataStore["new_orders"]["orders"] = window.wholesalerAccountData;
         } else {
             console.log("wind --> ", window.wholesalerAccountData);
@@ -792,20 +754,7 @@ function showBrandLevelDetails(data, currentSku, requestType, requestSku) {
                     isDateSelectedforNewOrder = "";
                 }
             })
-            if(isDateSelectedforNewOrder) {
-                let trimData = window.wholesalerAccountData && window.wholesalerAccountData.filter((whData, index) => {
-                    let sum = 0;
-                    whData["product_details"].map((detail, ind) => {
-                        sum = sum + Number(detail["units"]);
-                    })
-                    if(sum != 0) {
-                        return whData;
-                    } else {
-                        orderCartData.pop();
-                    }
-                });
-                window.wholesalerAccountData = trimData;
-                window.dataStore['new_orders']['orders'] = trimData;
+            if (isDateSelectedforNewOrder) {
                 loadBrandSelectionUI(parseData);
                 let nwData = {
                     ...parseData,
