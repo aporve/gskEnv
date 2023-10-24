@@ -387,6 +387,14 @@ window.addEventListener('message', function (eventData) {
         }), '*');
     }
 
+    if (parsedEventData.event_code === "delete-user") {
+        // console.log('delete-user Data in child Iframe~~~>>', parsedEventData.data)
+        parent.postMessage(JSON.stringify({
+            event_code: 'delete-user',
+            data: parsedEventData.data
+        }), '*');
+    }
+
     if (parsedEventData.event_code === "get-data-from-localstorage") {
         // console.log('get-data-from-localstorage Data in child Iframe~~~>>', parsedEventData.data)
         parent.postMessage(JSON.stringify({
