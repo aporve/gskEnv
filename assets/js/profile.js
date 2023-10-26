@@ -235,6 +235,7 @@ function loadUserProfile(data) {
             $("#deleteUser").click(function (e) {
                 e.stopPropagation();
                 e.stopImmediatePropagation();
+                removeHeader();
                 ToBot("delete-user", {});
             });
         }
