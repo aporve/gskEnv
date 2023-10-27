@@ -829,6 +829,9 @@ table {
 /* Footer Start */
 .footer {
     height: 14px;
+    z-index: 9;
+    position: relative;
+    background: #f0efed;
 }
 
 .footer .copyright {
