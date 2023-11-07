@@ -6,7 +6,7 @@
     animation: unset;
 }
 
-.profile_setting_card.active > .order_card.menu {
+.profile_setting_card.active>.order_card.menu {
     /* position: fixed; */
     top: 64px;
     /* width: calc(100% - 40px); */
@@ -104,13 +104,14 @@
     color: #f23904;
     background: transparent;
 }
+
 /* Order Card End */
 
 .date-picker-value.date_order {
     margin-bottom: 6px;
 }
 
-.date-picker-value.date_order + .flex.title {
+.date-picker-value.date_order+.flex.title {
     font-size: 13px;
     line-height: 20px;
     color: #151515;
@@ -136,7 +137,7 @@
     z-index: 1;
 }
 
-.calendar-picker .picker + .input_date_picker {
+.calendar-picker .picker+.input_date_picker {
     font-size: 14px;
     margin: 0 0.75rem 0 1.5rem;
 }
@@ -172,39 +173,39 @@
     margin-bottom: 4px;
 }
 
-.title.backbtn + .card_click .flex .order_status:nth-child(2) {
+.title.backbtn+.card_click .flex .order_status:nth-child(2) {
     display: none;
 }
 
-.title.backbtn.hide + .card_click .flex .order_status:nth-child(2) {
+.title.backbtn.hide+.card_click .flex .order_status:nth-child(2) {
     display: block;
 }
 
-.title.backbtn.hide + .card_click .flex .order_on_date {
+.title.backbtn.hide+.card_click .flex .order_on_date {
     display: none;
 }
 
-.title.backbtn + .card_click .flex .order_on_date .info:first-child {
+.title.backbtn+.card_click .flex .order_on_date .info:first-child {
     font-weight: 500;
 }
 
-.title.backbtn.hide + .card_click .flex .order_status .info:first-child {
+.title.backbtn.hide+.card_click .flex .order_status .info:first-child {
     font-weight: 400;
 }
 
-.title.backbtn + .card_click .flex .order_status .info:first-child {
+.title.backbtn+.card_click .flex .order_status .info:first-child {
     font-weight: 500;
 }
 
-.title.backbtn.hide + .card_click .title .arrow {
+.title.backbtn.hide+.card_click .title .arrow {
     display: block;
 }
 
-.title.backbtn + .card_click .title .arrow{
+.title.backbtn+.card_click .title .arrow {
     display: none;
 }
 
-.title.backbtn.hide + .card_click + .order_cart.history > .title {
+.title.backbtn.hide+.card_click+.order_cart.history>.title {
     border-top: none;
     padding-top: none;
     width: unset;
@@ -213,7 +214,7 @@
 }
 
 
-.title.backbtn + .card_click + .order_cart.history > .title {
+.title.backbtn+.card_click+.order_cart.history>.title {
     border-top: 1px solid #E6E6E6;
     padding-top: 6px;
     padding-left: 0;
@@ -226,7 +227,9 @@
     font-weight: 400;
     font-size: 16px;
     color: #959595;
-    margin: 25px 0 -15px 0;
+    /* margin: 25px 0 -15px 0; */
+    margin: 0 0 -15px 0;
+    padding-top: 25px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -16,8 +16,9 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 18px;
-    margin: 20px 0;
-    padding: 0 20px;
+    /* margin: 20px 0;
+    padding: 0 20px; */
+    padding: 20px;
 }
 
 .termsofuse .termsofuse_content {
@@ -97,4 +98,5 @@
     color: #fff;
     background: #f36633;
 }
+
 /* Terms of use End */
