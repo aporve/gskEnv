@@ -11,7 +11,6 @@ function loadUserWelcomeUI(data) {
 
     if (!data?.["previous_orders"]?.["orders"].length) {
         $("#content_box").append(`<div class='empty_screen_msg'>${locale["labels"]["emptyOrder"]}`);
-        $("#bodyContent").css("height", "calc(100% - 76px - 14px)");
     }
 
     $("#content_box").append(`
