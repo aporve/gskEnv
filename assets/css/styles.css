@@ -3,7 +3,10 @@
     /* margin-top: 20px; */
 }
 
-.header.hide+.bodyContent {
+/* .header.hide+.bodyContent {
+    margin-top: 0px;
+} */
+.header.hide+.welcomeui+.bodyContent {
     margin-top: 0px;
 }
 

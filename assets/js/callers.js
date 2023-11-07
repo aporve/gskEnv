@@ -240,6 +240,7 @@ function ToBot(eventName, data) {
 
 function ToApp(eventName, data, orgData) {
     window.currentScreen = eventName;
+    $("#welcomeui").removeClass("hide");
     switch (eventName) {
         case "user-login":
             userData = data;
