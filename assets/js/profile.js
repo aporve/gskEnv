@@ -13,7 +13,8 @@ function loadUserProfile(data) {
     let localStoredData = JSON.parse(localStorage.getItem("data"));
     let locale = localStoredData["locale"];
 
-    $("#bodyContent").css("height", "calc(100% - 76px - 14px)");
+    // $("#bodyContent").css("height", "calc(100% - 76px - 14px)");
+    $("#welcomeui").addClass("hide");
     $("#content_box").append(`
         <div class="profile_section_container">
         <div class="accordion">
